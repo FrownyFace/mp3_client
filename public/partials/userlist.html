@@ -1,0 +1,10 @@
+<div class="list" ng-controller='UserListController'>
+  <div class="row"><a class="button right success" ng-click=addUser()>Add User</a></div>
+	<ul>
+		<li class="row panel" ng-repeat="user in users">
+      <h3><a ng-click=detail(user)>{{user.name}}</a></h3>
+      <p>{{user.email}}</p>
+      <a class="button alert" ng-click=delete(user)> Delete</a>
+		</li>
+	</ul>
+</div>

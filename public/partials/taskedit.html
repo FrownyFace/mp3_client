@@ -1,0 +1,9 @@
+<form id="form" style="text-align:center;">
+  <div class="row"><div class="small-12 columns"><input type="text" ng-model="name"></div></div>
+    <div class="row"><div class="small-12 columns"><input type="text" ng-model="desc"></div></div>
+      <div class="row"><div class="small-12 columns"><datepicker><input  ng-model="dead" type="text"/></datepicker></div></div>
+        <div class="row"><div class="small-12 columns"><div><select ng-model="user"><option ng-repeat="option in userlist" value="{{option}}">{{option.name}}</option></select></div></div>
+    <input type="radio" ng-model="btn" value=0> Not Completed
+    <input type="radio" ng-model="btn" value=1> Completed
+</form>
+<div class="row"><a class="button" ng-click="edit()">Edit</a></div>

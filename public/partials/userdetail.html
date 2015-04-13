@@ -1,0 +1,8 @@
+<div ng-controller="UserDetailController">
+  <p>{{user.name}}</p>
+  <p>{{user.email}}</p>
+  <div class="row panel" ng-repeat="pen in pend">{{pen.name}}<a class="button alert right" ng-click="complete(pen)">Complete</a></div>
+  <a class="alert" ng-click="toggle()">Show Completed</a>
+  <div class="row panel" ng-show="show" ng-repeat="com in comp">{{com.name}}</div>
+  <p>{{message}}</p>
+</div>

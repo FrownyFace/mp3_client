@@ -1,0 +1,23 @@
+<div class="list" ng-controller='TaskListController'>
+  <div class="row"><a class="button" ng-disabled="p" ng-click=count=count-10>Previous</a>
+  <a class="button" ng-disabled="n" ng-click=count=count+10>Next</a>
+  <!--{{count}} {{total}} {{sort}} {{sortf}}-->
+  Page {{countf}} of {{totalf}}
+  <a class="right success button" ng-click=addTask() >Add Task</a></div>
+  <div class="row"><select ng-model="sort"><option ng-repeat="option in select" value="{{option}}">{{option}}</option></select></div>
+    <form id="form" style="text-align:center;">
+        <input type="radio" value=1 ng-model="ascc">Down
+        <input type="radio" value=-1 ng-model="ascc">Up
+    </form>
+    <form id="form" style="text-align:center;">
+        <input type="radio" value=0 ng-model="revs">All
+        <input type="radio" value=1 ng-model="revs">Completed
+        <input type="radio" value=2 ng-model="revs">Pending
+    </form>
+  <ul>
+		<li class="row panel" ng-repeat="task in tasks">
+			<h3><a ng-click=detail(task)>{{task.name}}</a></h3>
+      <p>{{task.assignedUserName}}</p>
+      <a class="button alert" ng-click=delete(task)> Delete</a>
+		</li>
+	</ul>
